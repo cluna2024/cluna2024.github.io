@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - E3 Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0B0D53;
+            color: #ffffff;
+            text-align: center;
+        }
+        header {
+            background-color: #02033B;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+        }
+        footer {
+            background-color: #02033B;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <img src="home.png" alt="Imagen principal">
+    </main>
+    <footer>
+        &copy; 2025 E3 Store - Todos los derechos reservados
+    </footer>
+    
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            createChat({
+                webhookUrl: 'http://localhost:5678/webhook/139c64b0-449a-4ea1-957b-c43b7eece9b4/chat',
+                title: 'E3-Store',
+                subtitle: 'Estoy aquí para ayudarte',
+                placeholder: 'Escribe tu mensaje...',
+                initialMessages: [
+                    'Hola, mi nombre es Valeria. ¿En qué puedo ayudarte hoy?'
+                ],
+                theme: {
+                    primaryColor: '#0B0D53',
+                    backgroundColor: '#ffffff',
+                    textColor: '#000000'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
