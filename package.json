@@ -1,0 +1,13 @@
+{
+    "name": "n8n-chat",
+    "version": "1.0.0",
+    "description": "Un chatbot personalizado con @n8n/chat",
+    "main": "script.js",
+    "scripts": {
+      "start": "node script.js"
+    },
+    "dependencies": {
+      "@n8n/chat": "^0.1.0"
+    },
+    "type": "module"
+  }
